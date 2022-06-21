@@ -1,0 +1,263 @@
+//Method -- A Method is a block of code whic only runs when it is called.
+
+//Method-- Methods also known as functions.
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+//Why use methods?
+ // To reuse code: 
+//define the code once, 
+//and use it many times.
+'"""""""""""""""''"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+"""""""""""'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// #Method Types----------
+1. pre-defined
+2. User- defined
+
+
+// A method is defined with the name of the method, followed by parentheses ().
+
+
+//static method (Method with static( public static void show()  )
+
+//non static method--- Method without static( public void show()  )
+
+// Parametrized Method -- if variable is given inside the paranthesis() called as Parametrized Method.
+//exam - public static void Add(int num1, int num2,)  -- static Parametrized Method
+     //  public void Add(int num1, int num2,)   ------- Non static parametrized Method
+
+
+// Non-Parametrized Method-- if variable is not given inside the paranthesis() called as Parametrized Method.
+
+//exam - public static void Add()  -- static Non-Parametrized Method
+     //  public void Add()   ------- Non static Non-parametrized Method
+
+// in static method no need to call obj.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+public class Program
+{ 
+	public static void show1()
+	{
+		Console.WriteLine("static Method no need to call " );
+	}
+  	public static void Main()  
+	{
+		
+	show1();
+		
+	}
+}
+''''''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''
+""""""""""""""""""""""""""""""""""""""
+// in static method no need to call obj.
+
+public class Program
+{ 
+	public static void show1()
+	{
+		Console.WriteLine("static Method no need to call " );
+	}
+  	public static void Main()  
+	{
+	
+		Program p1 = new Program();
+		p1.show();
+	}
+}
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+""""""""""""""""""""""""""""""""""""""
+Mix static and non- static method 
+""""""""""""""""""""""""""""""""""""""
+public class Program
+{ 
+	public void show()
+	{
+		Console.WriteLine("Non-static Method need to call " );
+	}
+	public static void show1()
+	{
+		Console.WriteLine("static Method no need to call " );
+	}
+  	public static void Main()  
+	{
+		
+	show1();
+		Program p1 = new Program();
+		p1.show();
+	}
+}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+//Parametrized Method -- if variable is given inside the paranthesis() called as Parametrized Method.
+//exam - public static void Add(int num1, int num2,)  -- static Parametrized Method
+
+public class Program
+{ 
+	public static void Add(int num1,int num2)
+	{
+		int result = num1 + num2; 
+		Console.WriteLine("Addition result is : "+ result );
+	
+  	public static void Main()  
+	      {
+		
+	          Add(10,20);
+		  Add(20,30);
+		  Add(30,40);
+		  Add(40,50);
+	     } 
+       }
+}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+/ Non-Parametrized Method-- if variable is not given inside the paranthesis() called as Parametrized Method.
+
+//exam - public static void Add()  -- static Non-Parametrized Method
+     //  public void Add()   ------- Non static Non-parametrized Method
+
+
+public class Program
+{ 
+	public static void Add()
+	{
+		
+		Console.WriteLine("Exampe of Non- paramethrized method" );
+	}
+	
+  	public static void Main()  
+	{
+		
+	    Add();
+		
+	}
+}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+public class Program
+{ 
+	public static void Add(int num1,int num2)
+	{
+		int result = num1 + num2; 
+		Console.WriteLine("Addition result is : "+ result );
+	}
+	//public static void show1()
+	//{
+	//	Console.WriteLine("static Method no need to call " );
+	//}
+  	public static void Main()  
+	{
+		Console.WriteLine("Enter the first Number : " );
+		int a = int.Parse(Console.ReadLine());  // To take input from user (datatype.variable = datatype.parse(Console.ReadLine());)
+		Console.WriteLine("Enter the second Number : " );
+		int b = int.Parse(Console.ReadLine());
+	    Program.Add(a,b); // in signature of paranthesis enter variabale,varaibale,.....
+                Console.WriteLine("Enter the second Number : ........." );
+		Console.WriteLine("Enter the second Number : ........." );
+		Add(20,30);
+		Add(30,40);
+		Add(40,50);
+	//	Program p1 = new Program();
+	//	p1.show();
+	}
+}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+public class Program
+{ 
+	public static void Add(int num1,int num2)
+	{
+		int result = num1 + num2; 
+		Console.WriteLine("Addition result is : "+ result );
+	}
+	public static void show()
+	{
+		Console.WriteLine("static Method no need to call " );
+	}
+	public static void showName(string name)
+
+	{
+		Console.WriteLine("Enter your name - " + name);
+	}
+  	public static void Main() 
+	{
+		Console.WriteLine("Enter your name: " );
+		string A = string.Copy(Console.ReadLine()); To take input from user (datatype.variable = datatype.parse(Console.ReadLine());)
+		Program.showName("Nitish Mehta");
+		Console.WriteLine("Enter the first Number : " );
+		int a = int.Parse(Console.ReadLine());
+		Console.WriteLine("Enter the second Number : " );
+		int b = int.Parse(Console.ReadLine());
+	    Program.Add(a,b);
+		Console.WriteLine("Enter the second Number : ........." );
+		Add(20,30);
+		Add(30,40);
+		Add(40,50);
+		Console.WriteLine("Enter the second Number : ........." );
+	Program p1 = new Program();
+	Program.show();
+	}
+}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// #Parameters and Argument
+
+// **parameters-- variable inside the Method of the parentheses.
+// **Exam public static void show_Name_Age(string name, int age)
+// **Here Method is show_Name_Age & (name,age)--parameters
+// **When a parameter is passed to the method, it is called an argument.
+// **Program.show_Name_Age("Nitish", 24);here (itish", 24)---are Argument
+
+// **Information can be passed to methods as parameter. 
+// **Parameters act as variables inside the method.
+using System;
+					
+public class Program
+{
+	public static void show_Name_Age(string name, int age)
+	{
+		Console.WriteLine("Your name is " +name);
+		Console.WriteLine("Your age is " +age);
+	}
+	public static void Main()
+	{
+		Program.show_Name_Age("Nitish", 24);
+		
+		
+	}
+}
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::"""""""""""::"":""""""""""""""""""""""""""":""""""""""""""""""
+
+using System;
+					
+public class Program
+{
+	public static void show_Name_Age(string name, int age)
+	{
+		Console.WriteLine("Your name is " +name);
+		Console.WriteLine("Your age is " +age);
+	}
+	public static void Main()
+	{
+		Program.show_Name_Age("Nitish",24);
+		Program.show_Name_Age(age:24 , name :"Nitish"); 
+// ---Named Arguments(to give the name before the Arguments assigned value)
+// if you are changing arguments location
+	}
+}
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'''
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
